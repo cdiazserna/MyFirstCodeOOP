@@ -7,5 +7,12 @@
       <FileName>Date.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="MyFirstCodeOOP.SalaryEmployee">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SalaryEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
