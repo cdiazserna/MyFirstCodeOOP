@@ -5,9 +5,9 @@ namespace MyFirstCodeOOP
     public class Date
     {
         #region Properties
-        private int _year;
-        private int _month;
-        private int _day;
+        public int _year;
+        public int _month;
+        public int _day;
         #endregion
 
         #region Constructor
