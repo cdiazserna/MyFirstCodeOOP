@@ -33,24 +33,17 @@ namespace MyFirstCodeOOP
         }
 
         private int ValidateDay(int year, int month, int day)
-        {
-            if (month == 2 && day >= 1 && day <= 28)
+        {           
+            if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
             }
 
-            else if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month  == 12)
+            int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+            if (day >= 1 && day <= daysPerMonth[month])
             {
-                if (day >= 1 && day <= 31)
-                {
-                    return day;
-                }
-                
+                return day;
             }
-            else if (day >= 1 && day <= 30)
-                {
-                    return day;
-                } 
 
             throw new DayException(String.Format("The day {0} doesn't exist for month {1}.", day, month));
         }
@@ -72,7 +65,7 @@ namespace MyFirstCodeOOP
 
         private bool IsLeapYear(int year)
         {
-            return year % 400 == 0 || year % 4 == 0 && year % 100 == 0;
+            return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
         }
         #endregion
     }
