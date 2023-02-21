@@ -59,11 +59,11 @@ namespace MyFirstCodeOOP
 
                 Console.WriteLine(salaryEmployee);
 
-                Console.WriteLine("***********************");
+                Console.WriteLine("");
+
+                Console.WriteLine("****************++++***");
                 Console.WriteLine("* COMMISSION EMPLOYEE *");
                 Console.WriteLine("***********************");
-
-                CommissionEmployee commissionEmployee = new CommissionEmployee();
 
                 Console.WriteLine("Type your ID");
                 id = Convert.ToInt32(Console.ReadLine());
@@ -77,14 +77,13 @@ namespace MyFirstCodeOOP
                 Console.WriteLine("Are you active?");
                 isActive = Convert.ToBoolean(Console.ReadLine());
 
-                Console.WriteLine("Enter your commission in percentage:");
-                double commissionPercentage = Convert.ToDouble(Console.ReadLine());
-                commissionPercentage = commissionEmployee.ConvertPercentage(commissionPercentage);
+                Console.WriteLine("Enter your commission percentage:");
+                float commissionPercentage = Convert.ToSingle(Console.ReadLine());
 
                 Console.WriteLine("Enter your sales:");
                 decimal sales = Convert.ToDecimal(Console.ReadLine());
 
-                Employee commissionEmployee1 = new CommissionEmployee()
+                Employee commissionEmployee = new CommissionEmployee()
                 {
                     Id = id,
                     FirstName = firstName,
@@ -92,11 +91,11 @@ namespace MyFirstCodeOOP
                     BirthDate = new Date(Convert.ToInt32(year), Convert.ToInt32(month), Convert.ToInt32(day)),
                     HiringDate = new Date(2022, 3, 4),
                     IsActive = isActive,
-                    CommissionPercentage = (float)commissionPercentage,
-                    Sales = sales,
+                    CommissionPercentage = commissionPercentage,
+                    Sales= sales,
                 };
 
-                Console.WriteLine(commissionEmployee1);
+                Console.WriteLine(commissionEmployee);
 
             }
             catch (Exception ex)
