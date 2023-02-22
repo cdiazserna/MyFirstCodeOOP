@@ -19,9 +19,9 @@ namespace MyFirstCodeOOP
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tNumber of hours......{Hours}" +
-                $"\n\tValue per hour.......{HourValue:C2}" +
-                $"\n\tValue to pay.........{GetValueToPay():C2}";
+                $"\n\tNumber of hours....{Hours}" +
+                $"\n\tValue per hour.....{HourValue:C2}" +
+                $"\n\tValue to pay.......{GetValueToPay():C2}";
         }
     }
 }

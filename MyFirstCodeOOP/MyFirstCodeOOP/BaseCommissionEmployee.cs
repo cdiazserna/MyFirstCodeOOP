@@ -13,14 +13,14 @@ namespace MyFirstCodeOOP
         #region Methods
         public override decimal GetValueToPay()
         {
-            return ((Sales * (decimal)ConvertPercentage(CommissionPercentage)) + Base);
+            return base.GetValueToPay() + Base;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tSalary Base......{Base:C2}" +
-                $"\n\tValue to pay.....{GetValueToPay():C2}";
+                $"\n\tSalary Base................{Base:C2}" +
+                $"\n\tValue to pay...............{GetValueToPay():C2}";
         }
         #endregion
     }
