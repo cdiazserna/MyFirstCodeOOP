@@ -1,4 +1,8 @@
-﻿using System;
+﻿using MyFirstCodeOOP.Helper;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace MyFirstCodeOOP
 {
@@ -57,7 +61,7 @@ namespace MyFirstCodeOOP
                     Salary = salary,
                 };
 
-                Console.WriteLine(salaryEmployee);
+                //Console.WriteLine(salaryEmployee);
 
                 Console.WriteLine("");
 
@@ -95,7 +99,7 @@ namespace MyFirstCodeOOP
                     Sales= sales,
                 };
 
-                Console.WriteLine(commissionEmployee);
+                //Console.WriteLine(commissionEmployee);
 
                 Console.WriteLine("");
 
@@ -133,7 +137,7 @@ namespace MyFirstCodeOOP
                     HourValue = hourValue,
                 };
 
-                Console.WriteLine(contractorEmployee);
+                //Console.WriteLine(contractorEmployee);
 
                 Console.WriteLine("");
 
@@ -175,7 +179,11 @@ namespace MyFirstCodeOOP
                     Base = salaryBase
                 };
 
-                Console.WriteLine(baseComissionEmployee);
+                //Console.WriteLine(baseComissionEmployee);
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, contractorEmployee, baseComissionEmployee);
+
+                Console.WriteLine($"Total Payroll:...........{employeeHelper.GetPayrollFromActiveEmployees():C2}");
 
             }
             catch (Exception ex)
