@@ -20,7 +20,7 @@ namespace MyFirstCodeOOP
         {
             return $"{base.ToString()}" +
                 $"\n\tSalary Base................{Base:C2}" +
-                $"\n\tTotal to pay...............{GetValueToPay():C2}";
+                $"\n\tValue to pay.....{GetValueToPay():C2}";
         }
         #endregion
     }
